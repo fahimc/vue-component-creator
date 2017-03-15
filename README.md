@@ -1,10 +1,13 @@
 # vue-component-creator
-npm scripts to create files and folders for 'separation of concern' components.  
+This is a script designed for vuejs cli to create **SOC** (separation of concern) based components.   
+This is a simple tool to automatically create files and folders for 'separation of concern' components.  
 
 
 # Installation 
 
-1. First thing you want to do is pull in the repo into your current project by using git's submodule command.  
+1. Follow the [Vue CLI](https://vuejs.org/v2/guide/installation.html) guide and setup your vue boilerplate project.  
+
+2. Next thing you want to do is pull in the repo into your current project by using git's submodule command.  
 
 ```cmd
 git submodule add -b master https://github.com/fahimc/vue-component-creator.git 
@@ -16,7 +19,7 @@ git submodule add -b master https://github.com/fahimc/vue-component-creator.git
 git submodule update --init --recursive
 ```
 
-2. Next you need to run the init script.  
+3. Next you need to run the init script.  
 
 ```cmd
 node vue-component-creator/init.js
@@ -41,5 +44,13 @@ my-component-name
 
 **NOTE:** use kebab case only.  
 
-Your component has now been created!  
+Your component has now been created!    
+
+You will need to hook it up yourself but you should be ready to build a component.  
+
+# Help 
+
+Read [vue-template webpack documentation](http://vuejs-templates.github.io/webpack/) for more information on how the repo works.  
+
+
 
