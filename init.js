@@ -1,5 +1,4 @@
 const ComponentUtil = require('./utils/componentUtil.js');
-const TEMPLATE = require('./template/component.js');
 const CLI = require('./utils/cli.js');
 const fs = require('fs');
 const path = require('path');
@@ -34,7 +33,7 @@ const VueInit = {
         return json;
     },
     createApp() {
-        ComponentUtil.createComponent('app', TEMPLATE.appHTML);
+        ComponentUtil.createComponent('app', true);
     },
     updateFiles() {
         ComponentUtil.updateFile('../src/main.js', ['./App'], './components/app/app');

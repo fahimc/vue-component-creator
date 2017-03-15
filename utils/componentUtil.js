@@ -5,7 +5,7 @@ const TEMPLATES = require(path.dirname(require.main.filename) + '/template/compo
 const ComponentUtil = {
     APP_DIR: path.resolve(path.dirname(require.main.filename), '../'),
     COMPONENT_DIR: 'src/components',
-    createComponent(componentName, HTMLTemplate) {
+    createComponent(componentName, isApp) {
         let componentPath = this.APP_DIR + '/' + this.COMPONENT_DIR + '/' + componentName;
         let folders = [
             componentPath,
@@ -15,9 +15,9 @@ const ComponentUtil = {
         ];
         this.createFolderList(folders);
         this.createFile(componentPath + '/' + componentName + '.vue', TEMPLATES.vue);
-        this.createFile(componentPath + '/template/template.html', HTMLTemplate ? HTMLTemplate : this.replaceName(componentName, TEMPLATES.html));
+        this.createFile(componentPath + '/template/template.html', isApp ? TEMPLATES.appHTML : this.replaceName(componentName, TEMPLATES.html));
         this.createFile(componentPath + '/src/component.js', this.replaceName(componentName, TEMPLATES.js));
-        this.createFile(componentPath + '/style/style.scss', this.replaceName(componentName, TEMPLATES.style));
+        this.createFile(componentPath + '/style/style.scss', this.replaceName(componentName, isApp ? TEMPLATES.appStyle : TEMPLATES.style));
 
     },
     replaceName(componentName, templateString) {
