@@ -14,7 +14,7 @@ const VueInit = {
         this.updateFiles();
     },
     install() {
-        CLI.execute('npm install --save vue-style-loader && npm install --save css-loader && npm install readline --save', process.cwd());
+        CLI.execute('npm install --save sass-loader && npm install --save node-sass && npm install readline --save', process.cwd());
     },
     readPackageJSON() {
         let packagePath = path.resolve(process.cwd() + '/package.json');
