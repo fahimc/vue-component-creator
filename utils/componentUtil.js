@@ -15,9 +15,9 @@ const ComponentUtil = {
         ];
         this.createFolderList(folders);
         this.createFile(componentPath + '/' + componentName + '.vue', TEMPLATES.vue);
-        this.createFile(componentPath + '/template/template.html', HTMLTemplate ? HTMLTemplate : TEMPLATES.html);
+        this.createFile(componentPath + '/template/template.html', HTMLTemplate ? HTMLTemplate : this.replaceName(componentName, TEMPLATES.html));
         this.createFile(componentPath + '/src/component.js', this.replaceName(componentName, TEMPLATES.js));
-        this.createFile(componentPath + '/style/style.scss', '');
+        this.createFile(componentPath + '/style/style.scss', this.replaceName(componentName, TEMPLATES.style));
 
     },
     replaceName(componentName, templateString) {
