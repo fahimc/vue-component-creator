@@ -1,5 +1,5 @@
 module.exports = {
   html: '<div></div>',
-  vue: '<template src="./template/template.html"></template><script src="./src/component.js"></script><style scoped src="./style/style.css"></style>',
-  js: 'export default {name: \'{componentName}\'};'
+  vue: '<template src="./template/template.html">\n</template><script src="./src/component.js">\n</script><style lang="scss" scoped src="./style/style.scss"></style>',
+  js: 'export default {\nname: \'{componentName}\'\n};'
 };

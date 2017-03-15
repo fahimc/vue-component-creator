@@ -17,7 +17,7 @@ const ComponentUtil = {
         this.createFile(componentPath + '/' + componentName + '.vue', TEMPLATES.vue);
         this.createFile(componentPath + '/template/template.html', HTMLTemplate ? HTMLTemplate : TEMPLATES.html);
         this.createFile(componentPath + '/src/component.js', this.replaceName(componentName, TEMPLATES.js));
-        this.createFile(componentPath + '/style/style.css', '');
+        this.createFile(componentPath + '/style/style.scss', '');
 
     },
     replaceName(componentName, templateString) {
