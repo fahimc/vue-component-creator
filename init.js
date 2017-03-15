@@ -4,7 +4,7 @@ const CLI = require('./utils/cli.js');
 const fs = require('fs');
 const path = require('path');
 
-const VCCPInit = {
+const VueInit = {
     init() {
         this.readPackageJSON();
         this.install();
