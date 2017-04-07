@@ -48,6 +48,17 @@ Your component has now been created!
 
 You will need to hook it up yourself but you should be ready to build a component.
 
+# Advanced    
+
+You can provide the src folder path in the package.json file like so:  
+
+```js
+"vue-component-creator": {
+    "src-path": "src/app"
+  }
+```
+
+
 # Help
 
 Read [vue-template webpack documentation](http://vuejs-templates.github.io/webpack/) for more information on how the repo works.
