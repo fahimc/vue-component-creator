@@ -1,11 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const TEMPLATES = require(path.dirname(require.main.filename) + '/template/component.js');
+const packageJSON = require(path.resolve(path.dirname(require.main.filename), '../package.json'));
 
 const ComponentUtil = {
-    APP_DIR: path.resolve(path.dirname(require.main.filename), '../'),
-    COMPONENT_DIR: 'src/components',
+    APP_DIR: path.resolve(path.dirname(require.main.filename), '../src/'),
+    COMPONENT_DIR: 'components',
     createComponent(componentName, isApp) {
+        
+        if (packageJSON['vue-component-creator'] && packageJSON['vue-component-creator']['src-path']) this.APP_DIR = path.resolve(path.dirname(require.main.filename), '../' + packageJSON['vue-component-creator']['src-path']);
+
         let componentPath = this.APP_DIR + '/' + this.COMPONENT_DIR + '/' + componentName;
         let folders = [
             componentPath,
