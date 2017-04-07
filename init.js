@@ -29,6 +29,7 @@ const VueInit = {
             }.bind(this));
     },
     updatePackage(json) {
+        if(!json['scripts'])json['scripts'] = {};
         json['scripts']['create-component'] = "node vue-component-creator/create-component.js";
         return json;
     },
