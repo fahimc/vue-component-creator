@@ -51,6 +51,7 @@ const ComponentUtil = {
     },
     updateFile(src, replaceStringArray, newString) {
         let mainPath = path.resolve(path.dirname(require.main.filename), src);
+        if (!fs.existsSync(mainPath)) return;
         fs.readFile(mainPath, 'utf8', function(err, data) {
             if (err) {
                 return console.log(err);
